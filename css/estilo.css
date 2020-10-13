@@ -1,0 +1,177 @@
+*{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    /*padding: 0;
+    margin: 0;*/
+    box-sizing: border-box;
+}
+
+
+body{
+    
+    max-width: 1800px; /*100%*/
+    height: 2500px; /*100%*/
+}
+
+    /*Menu*/
+
+.menu{
+    background-color:#DC2D36;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 14% 0 1%;
+    font-size: 150%; /* Seria interessante o menu estar dentro de uma lista, para assim coordenar melhor*/
+    
+}
+
+
+nav.menu ul {
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+nav.menu li{
+    list-style:none;
+}
+
+nav.menu ul img:hover {
+    filter: drop-shadow(2px 4px 6px black);
+    transition: 0.5s;
+}
+
+nav.menu ul a:hover {
+  text-shadow: 2px 2px 4px #000000;
+  transition: 0.5s;
+}
+
+
+
+
+
+    /*Principal*/
+main {
+        max-width: 1795px; /*99%*/
+        height: 2000px; /*80%*/
+    }
+
+/*Página Produtos*/
+/* Seção Categorias*/
+.categorias{
+
+    display: block;
+    float: left;
+    height:62%; /* Só funciona se o houver um elemento pai com uma altura para servir de referência. Exemplo o main*/
+    max-width: 20%; /* 100 - 20 = 80*/
+   
+}
+
+
+
+.categorias ul li:hover{ /*.categorias ul li::selection{ color: red; background: yellow;*/
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #000000;
+    transition: 0.5s;
+
+}
+
+
+
+/*Seção Produtos*/
+
+.produtos {
+    max-width: 79%; /* 80 + 20 = 100*/
+    display: block;
+    float: left;
+    height: 62%; /* Só funciona se o houver um elemento pai com uma altura para servir de referência. Exemplo o main*/
+}
+
+
+
+.box_produto {
+    
+    float: left; 
+    width: 33%; /*33% em relação a área de produto*/
+    height: 24.4%; /*24.4% em relação a área de produto*/
+    font-size: 12px;
+    padding: 0.3% 0 0 0;
+}
+
+
+
+
+.box_produto img {
+    margin-left: 30%; /*A imagem surge após 30% de distância da margem à esquerda*/
+    /*width: 40%;*/
+    /*width:175px;*/
+    
+}
+
+.box_produto img:hover {
+    
+    cursor:zoom-in;
+}
+
+
+p.descricao {
+    text-align: center;
+   /* height: 0%; *//*Pois tem descrições que ocupam mais de uma linha. Assim tudo já ocupa um pouco mais*/
+}
+
+.preco{
+   color:#DC2D36;
+   text-align: center;
+}
+
+
+/* Página Contatos*/
+
+section.contatos {
+    margin: 0 0 150px 0;
+}
+
+form input {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+textarea#mensagem {
+    border: 1px solid black;
+    border-radius: 5px;
+    resize: none;
+}
+
+.fomulario-contato {
+    margin: 0 0 0 210px;
+    
+}
+
+
+button#Enviar {
+    width: 10%;
+    background-color: #DC2D36;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: width 2s;
+}
+
+button#Enviar:hover {
+    width: 20%;
+    text-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+  
+}
+
+#formas_pagamento{
+    color: #DC2D36;
+    text-align: center;
+}
+
+    /*Rodapé*/
+#rodape{
+    text-align: center;
+}

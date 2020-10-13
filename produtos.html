@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Full Stack Eletro</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <script src="js/index.js"></script>
+</head>
+<body>
+     <!-- íncio Menu -->
+     <nav class="menu">
+         <li>
+             <ul>
+                <a href="index.html"><img width="100px"  src="img/fullstackEletro.png" alt="Full Stack Eletro"></a>
+             </ul>
+            <ul>
+                <a href="produtos.html">Produtos</a>
+            </ul>
+            <ul>
+                <a href="loja.html">Nossas lojas</a>
+            </ul>
+            <ul>
+                <a href="contato.html">Contato</a>
+            </ul>
+        </li>
+    </nav>     
+    <!-- Fim Menu -->
+
+    <main>
+        <header>
+            <h1>Produtos</h1>
+        </header>
+        <hr>
+            <!-- Categorias-->
+            <section class="categorias">                
+                <h3>Categorias</h3>
+                    <ul>
+                        <li onclick="exibirCategoria('todos');">Todos (12)</li>
+                        <li onclick="exibirCategoria('geladeira');">Geladeira (3)</li>
+                        <li onclick="exibirCategoria('fogao');">Fogões (2)</li>
+                        <li onclick="exibirCategoria('microondas');">Microondas (3)</li>                     
+                        <li onclick="exibirCategoria('lavadoura');">Lavadoura de roupas (2)</li>                     
+                        <li onclick="exibirCategoria('lavaLoucas');">Lava louças (2)</li>                     
+                    </ul>
+            </section>
+             <!-- Produtos-->   
+            <section class="produtos">
+                <div class="box_produto" id="geladeira" >
+                    <img src="img/Geladeira01_1.png"  width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> <!-- Passa o elemento como objeto--> 
+                    <br>
+                    <p class="descricao">Geladeira/Refrigerador Consul Duplex Frost Free 340 litros Branca 110V</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 2.069,89</strike></p>
+                    <p class="preco">R$ 1.969,89</p>
+                </div>
+                
+                <div class="box_produto"  id="geladeira" >
+                    <img src="img/Geladeira02_1.png"  width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Geladeira/Refrigerador Brastemp Frost Free BRM44 375 Litros - Evox - 110v</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 2.448,99</strike></p>
+                    <p class="preco">R$ 2.348,99</p>
+                </div>
+
+                <div class="box_produto" id="geladeira" >
+                    <img src="img/Geladeira03_1.png"  width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Refrigerador Brastemp Side Inverse BRO80 540 Litros Ice Maker Evox 110v</p>
+                    <hr>
+                    <p class="descricao"><strike>R$  5.258,99</strike></p>
+                    <p class="preco">R$ 5.199,99</p>
+                </div>
+
+                <div class="box_produto" id="fogao" >
+                    <img src="img/Fogao01_1.png"   width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Fogão Brastemp 5 Bocas BFS5N - Inox</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 1.599,89</strike></p>
+                    <p class="preco">R$ 1.499,89</p>
+                </div>
+
+                <div class="box_produto" id="fogao" >
+                    <img src="img/Fogao02_1.png"   width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Fogão de Piso Mesa de Vidro Electrolux 5</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 1.848,89</strike></p>
+                    <p class="preco">R$ 1.748,89</p>
+                </div>
+
+                <div class="box_produto" id="microondas" >
+                    <img src="img/Microondas01_1.png"  width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Microondas 25L Espelhado Pme25 Philco 127V</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 679,99</strike></p>
+                    <p class="preco">R$ 579,99</p>
+                </div>
+
+                <div class="box_produto" id="microondas" >
+                    <img src="img/Microondas02_1.png"   width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Micro-ondas Consul Espelhado 32 Litros - CMS45 240v</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 4.100,00</strike></p>
+                    <p class="preco">R$ 4.000,00</p>
+                </div>
+
+                <div class="box_produto" id="microondas" >
+                    <img src="img/Microondas03_1.png"  width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Micro-ondas Brastemp Espelhado Grill 32</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 1.173,81</strike></p>
+                    <p class="preco">R$ 1.073,81</p>
+                </div>
+
+                <div class="box_produto" id="lavadoura" >
+                    <img src="img/Lavadoura01_1.png"   width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Máquina De Lavar Roupas Midea Storm</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 3.099,00</strike></p>
+                    <p class="preco">R$ 2.999,00</p>
+                </div>
+
+                <div class="box_produto" id="lavadoura" >
+                    <img src="img/Lavadoura02_1.png"   width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Lavadora de Roupas Brastemp 12Kg</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 2.099,99</strike></p>
+                    <p class="preco">R$ 1.999,99</p>
+                </div>
+
+                <div class="box_produto" id="lavaLoucas" >
+                    <img src="img/Lava_louca01_1.png"  width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Lava-Louças Electrolux Inox 14 Serviços LV14X</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 4.423,90</strike></p>
+                    <p class="preco">R$ 4.323,90</p>
+                </div>
+
+                <div class="box_produto" id="lavaLoucas" >
+                    <img src="img/Lava_louca02_1.png"   width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                    <br>
+                    <p class="descricao">Lava Louças Brastemp 10 Serviços BLF10 Branca 110V</p>
+                    <hr>
+                    <p class="descricao"><strike>R$ 3.699,89</strike></p>
+                    <p class="preco">R$ 3.599,89</p>
+                </div>
+
+            </section>    
+                
+                   
+                
+                
+               <!--  <td width="25%" align="center" valign="bottom">
+                    <img src="img/Lava_louca02_1.png"  width="30%" onmouseover="destaque(this);" onmouseout="destaque(this);"> 
+                -->
+                    
+
+
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    
+        <br><br><br>
+    </main>
+    <footer id="rodape">
+        <p id="formas_pagamento">Formas de pagamento</p>
+            <img width="300" height="100" src="img/formasPagamento.png" alt="Formas de Pagamento">
+        <p>&copy; Recode Pro</p>
+    </footer>
+
+</body>
+</html>
