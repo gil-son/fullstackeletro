@@ -127,6 +127,17 @@ p.descricao {
 }
 
 
+.formulario-pedido {
+    background: aliceblue;
+    display: block;
+    float: left;
+    margin: 0px 0px 0px 400px;
+}
+
+
+
+
+
 /* Página Contatos*/
 
 section.contatos {
@@ -149,9 +160,12 @@ textarea#mensagem {
     
 }
 
+.comentarios {
+    margin: 100px;
+}
 
 button#Enviar {
-    width: 10%;
+    width: 12%;
     background-color: #DC2D36;
     color: #fff;
     border: none;

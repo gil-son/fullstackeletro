@@ -75,3 +75,34 @@ function destaque(imagem){
             
     }
 }
+
+
+/* Finalizar Compra */
+
+
+
+// function quantidadeProduto() {
+//        var select = document.getElementById('iformulario-pedido');
+//        var option = select.options;
+//         console.log(option.text);
+//     //    let valor = document.getElementById('inome_produto').value;
+
+//        switch(option){
+//         case 'Geladeira/Refrigerador Consul Duplex Frost Free 340 litros Branca 110V': 1;break;
+//         case 'Geladeira/Refrigerador Brastemp Frost Free BRM44 375 Litros - Evox - 110v':2 ;break;
+//         case 'Geladeira Brastemp Side Inverse BRO80 540 Litros Ice Maker Evox 110v':3 ;break;
+//         case 'Fogão Brastemp 5 Bocas BFS5N - Inox':4 ;break;
+//         case 'Fogão de Piso Mesa de Vidro Electrolux 5':5 ;break;
+//         case 'Microondas 25L Espelhado Pme25 Philco 127V':6 ;break;
+//         case 'Micro-ondas Consul Espelhado 32 Litros - CMS45 240v':7 ;break;
+//         case 'Micro-ondas Brastemp Espelhado Grill 32':8 ;break;
+//         case 'Máquina De Lavar Roupas Midea Storm':9 ;break;
+//         case 'Lavadora de Roupas Brastemp 12Kg':10 ;break;
+//         case 'Lava-Louças Electrolux Inox 14 Serviços LV14X':11 ;break;
+//         case 'Lava Louças Brastemp 10 Serviços BLF10 Branca 110V':12 ;break;
+//        }
+       
+
+//         // document.getElementById('valor_total').value = "option.value";
+//         // document.getElementById('valo_unitario').value = option.value;
+// }
