@@ -1,3 +1,18 @@
+<?php
+    include_once('conexao.php');
+
+    if(isset($_POST['nome']) && isset($_POST['mensagem'])){
+        $nome = $_POST['nome'];
+        $mensagem = $_POST['mensagem'];
+
+        $sql = "insert into comentario (nome, mensagem) values('$nome','$mensagem')";
+        $result = $conn->query($sql);
+
+
+   
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,23 +23,8 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-      <!-- íncio Menu -->
-      <nav class="menu">
-        <li>
-            <ul>
-               <a href="index.html"><img width="100px"  src="img/fullstackEletro.png" alt="Full Stack Eletro"></a>
-            </ul>
-           <ul>
-               <a href="produtos.html">Produtos</a>
-           </ul>
-           <ul>
-               <a href="loja.html">Nossas lojas</a>
-           </ul>
-           <ul>
-               <a href="contato.html">Contato</a>
-           </ul>
-       </li>
-   </nav>  
+    <!-- início Menu -->
+        <?php include_once('menu.html') ?>  
     <!-- Fim Menu -->
     <main>
         <header>
@@ -48,15 +48,38 @@
          </section>
         
         <section class="fomulario-contato">
-            <form>
+            <form action="" method="post">
                 <label for="nome">Nome:</label>
                 <input id="nome" name="nome" value="" type="text" size="50" placeholder="Digite o e-mail..."><br><br>
                 <label for="mensagem">Mensagem:</label><br>
-                <textarea id="mensagem" name="mensagem" value="" rows="5" cols="100" placeholder="Digite a sua mensagem..."></textarea><br><br>
+                <textarea id="mensagem" name="mensagem" value="" rows="5" cols="100" placeholder="Digite a sua mensagem..." maxlength="300"></textarea><br><br>
                 <button id="Enviar" type="submit" value="Enviar">Enviar</button>
             </form>
         </section>
-     </main>
+     
+        <div class="comentarios">
+            <h3>Mensagens</h3>
+            <?php
+                        $sql = "select * from comentario";
+                        $result = $conn->query($sql);
+                        if($result->num_rows > 0){
+                            while($rows = $result->fetch_assoc()){
+                                echo "Data: " . $rows['data'] . "<br>" . "Nome: " .$rows['nome'] . "<br>". "Mensagem: " . $rows['mensagem'] . "<hr>";
+                            }
+                        }else{
+                            echo "Nenhum comentário no momento!";
+                        }
+                ?>
+        <div>
+    </main>
+
+
+
+
+
+
+
+
      <footer id="rodape">
         <p id="formas_pagamento">Formas de pagamento</p>
             <img width="300" height="100" src="img/formasPagamento.png" alt="Formas de Pagamento">

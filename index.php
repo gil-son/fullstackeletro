@@ -8,23 +8,8 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-     <!-- íncio do Menu -->
-     <nav class="menu">
-        <li>
-            <ul>
-               <a href="index.html"><img width="100px"  src="img/fullstackEletro.png" alt="Full Stack Eletro"></a>
-            </ul>
-           <ul>
-               <a href="produtos.html">Produtos</a>
-           </ul>
-           <ul>
-               <a href="loja.html">Nossas lojas</a>
-           </ul>
-           <ul>
-               <a href="contato.html">Contato</a>
-           </ul>
-       </li>
-   </nav>    
+    <!-- íncio Menu -->
+        <?php include_once('menu.html') ?> 
     <!-- Fim Menu -->
     <main>
         <header>
