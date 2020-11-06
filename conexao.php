@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
     $username="root";
-    $password="";
+    $password="38013051Q!1qqqqqqq";
     $database = "fseletro";
 
     // Criando conexao
