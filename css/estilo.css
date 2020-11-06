@@ -13,42 +13,10 @@ body{
     height: 2500px; /*100%*/
 }
 
-    /*Menu*/
 
 .menu{
-    background-color:#DC2D36;
+    width:70px;height:30px;
 }
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin: 0 14% 0 1%;
-    font-size: 150%; /* Seria interessante o menu estar dentro de uma lista, para assim coordenar melhor*/
-    
-}
-
-
-nav.menu ul {
-    width: 20%;
-    display: inline-block;
-    vertical-align: middle; 
-}
-
-nav.menu li{
-    list-style:none;
-}
-
-nav.menu ul img:hover {
-    filter: drop-shadow(2px 4px 6px black);
-    transition: 0.5s;
-}
-
-nav.menu ul a:hover {
-  text-shadow: 2px 2px 4px #000000;
-  transition: 0.5s;
-}
-
-
 
 
 
@@ -127,12 +95,6 @@ p.descricao {
 }
 
 
-.formulario-pedido {
-    background: aliceblue;
-    display: block;
-    float: left;
-    margin: 0px 0px 0px 400px;
-}
 
 
 
@@ -144,41 +106,12 @@ section.contatos {
     margin: 0 0 150px 0;
 }
 
-form input {
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-textarea#mensagem {
-    border: 1px solid black;
-    border-radius: 5px;
-    resize: none;
-}
-
-.fomulario-contato {
-    margin: 0 0 0 210px;
-    
-}
 
 .comentarios {
     margin: 100px;
 }
 
-button#Enviar {
-    width: 12%;
-    background-color: #DC2D36;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    transition: width 2s;
-}
 
-button#Enviar:hover {
-    width: 20%;
-    text-shadow: 2px 2px 4px #000000;
-    cursor: pointer;
-  
-}
 
 #formas_pagamento{
     color: #DC2D36;
