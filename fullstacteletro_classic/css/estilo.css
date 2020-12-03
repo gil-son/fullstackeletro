@@ -35,7 +35,7 @@ main {
     height:62%; /* Só funciona se o houver um elemento pai com uma altura para servir de referência. Exemplo o main*/
     max-width: 20%; /* 100 - 20 = 80*/
    
-}
+} 
 
 
 
