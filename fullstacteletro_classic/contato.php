@@ -7,7 +7,7 @@
 
         $sql = "insert into comentario (nome, mensagem) values('$nome','$mensagem')";
         $result = $conn->query($sql);
-
+ 
 
    
     }
