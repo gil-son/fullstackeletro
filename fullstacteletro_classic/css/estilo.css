@@ -37,7 +37,7 @@ main {
    
 }
 
-
+ 
 
 .categorias ul li:hover{ /*.categorias ul li::selection{ color: red; background: yellow;*/
     cursor: pointer;
