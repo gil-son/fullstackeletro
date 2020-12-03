@@ -79,7 +79,7 @@ function destaque(imagem){
 
 /* Finalizar Compra */
 
-
+ 
 
 // function quantidadeProduto() {
 //        var select = document.getElementById('iformulario-pedido');
