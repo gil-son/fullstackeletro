@@ -28,7 +28,7 @@
                         <ul>
                             <li onclick="exibirCategoria('todos');">Todos (12)</li>
                             <li onclick="exibirCategoria('geladeira');">Geladeira (3)</li>
-                            <li onclick="exibirCategoria('fogao');">Fogões (2)</li>
+                            <li onclick="exibirCategoria('fogao');">Fogões (2)</li> 
                             <li onclick="exibirCategoria('microondas');">Microondas (3)</li>                     
                             <li onclick="exibirCategoria('lavadoura');">Lavadoura de roupas (2)</li>                     
                             <li onclick="exibirCategoria('lavaLoucas');">Lava louças (2)</li>                     
