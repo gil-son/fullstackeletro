@@ -3,7 +3,7 @@
     $username="root";
     $password="";
     $database = "fseletro";
-
+ 
     // Criando conexao
     $conn = mysqli_connect($servername,$username,$password,$database);
 
