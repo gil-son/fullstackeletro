@@ -53,7 +53,7 @@
                             <td>Nordeste</td>
                             <td>(47) 5555-5555</td>
                         </tr>
-                    </tbody>
+                    </tbody> 
                 </table>
             </section>
         </div>
