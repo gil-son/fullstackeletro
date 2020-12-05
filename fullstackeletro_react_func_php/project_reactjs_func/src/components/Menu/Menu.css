@@ -1,0 +1,10 @@
+.nav-item{
+    display: flex;
+    justify-content:center;
+}
+
+
+/*Quando o menu mudar para ativo*/
+.active{
+    border-bottom: 2px solid rgba(255,255,245, .9);
+}
