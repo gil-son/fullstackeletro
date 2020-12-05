@@ -49,3 +49,16 @@ CREATE TABLE `pedido` (
   `valor_total` decimal(8,2) NOT NULL,
   PRIMARY KEY (`num_pedido`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Joins no sentido de rankeamento*/
+
+/*Categoria mais consumida*/
+SELECT categoria, SUM(quantidade) FROM produto
+INNER JOIN pedido
+ON idproduto = num_pedido
+GROUP BY categoria ORDER BY SUM(quantidade) DESC;
+
+/*O cliente que mais comprou em quantidade*/
+SELECT nome_cliente, descricao, MAX(quantidade) FROM produto
+INNER JOIN pedido
+ON idproduto = num_pedido;
