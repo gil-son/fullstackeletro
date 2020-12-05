@@ -14,7 +14,7 @@ class Ranking{
 
         $stmt = $connection->query("SELECT nome_cliente, descricao, max(quantidade) FROM produto
                                    INNER JOIN pedido
-                                   ON idproduto = num_pedido;"); 
+                                   ON idproduto = num_pedido"); 
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
         
@@ -28,7 +28,7 @@ class Ranking{
         $stmt = $connection->query("SELECT categoria, sum(quantidade) FROM produto
                                     INNER JOIN pedido
                                     ON idproduto = num_pedido
-                                    GROUP BY categoria;");
+                                    GROUP BY categoria");
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
         
