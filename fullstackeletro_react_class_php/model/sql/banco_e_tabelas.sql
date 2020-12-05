@@ -50,7 +50,7 @@ CREATE TABLE `pedido` (
   PRIMARY KEY (`num_pedido`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
-/*Joins no sentido de rankeamento*/
+/*Joins de rankeamento*/
 
 /*Categoria mais consumida*/
 SELECT categoria, SUM(quantidade) FROM produto
