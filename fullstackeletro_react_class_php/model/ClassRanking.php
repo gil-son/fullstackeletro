@@ -26,9 +26,9 @@ class Ranking{
         $connection = ClassConexao::conectaDB();
 
         $stmt = $connection->query("SELECT categoria, sum(quantidade) FROM produto
-                                      INNER JOIN pedido
-                                      ON idproduto = num_pedido
-                                      GROUP BY categoria;");
+                                    INNER JOIN pedido
+                                    ON idproduto = num_pedido
+                                    GROUP BY categoria;");
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
         
