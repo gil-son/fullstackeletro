@@ -47,8 +47,9 @@ CREATE TABLE `pedido` (
   `valor_unitario` decimal(8,2) NOT NULL,
   `quantidade` tinyint NOT NULL,
   `valor_total` decimal(8,2) NOT NULL,
-  PRIMARY KEY (`num_pedido`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+   PRIMARY KEY (`num_pedido`),
+   FOREIGN KEY (`id_produto`) references produto(`idproduto`)
+)  ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Joins de rankeamento*/
 
