@@ -1,39 +1,64 @@
 import React from 'react';
 import './Produto.css';
 
-export function ExibirProdutos(props){
+export class ExibirProdutos extends React.Component{
 
-    function Seleciona(event){
-        const target = event.currentTarget;
-        const elemento = target.getElementsByClassName("cartao")[0];
-        elemento.style.width = "25vh";
-        elemento.style.transition = "width 1s";
-        elemento.style.cursor = "zoom-in";
+    constructor(){
+        super();
+        this.state=({
+            db: []
+        });
+        this.exibirProdutos(); // Aqui é chamada a função que vai carregar a array, antes de passar para o Componente <ExibiProduto/>
+    }
 
-        // const target = event.currentTarget;
-        // const cartao = document.getElementsByClassName('card-img-top')[0];
-        // cartao.className = "w-75 m-auto";
 
-}
+    exibirProdutos(){
+        fetch("http://localhost/Recode%20Pro/Atividade/fullstackeletro_react_class_php/model/Produto_to_JSON.php")
+        .then((response)=>response.json())
+        .then((responseJson)=>
+        {
+            this.setState({
+                db: responseJson
+            });
+            console.log(this.state.db);
+        })
+    }
 
-function Deseleciona(event){
-        const target = event.currentTarget;
-        const elemento = target.getElementsByClassName("cartao")[0];
-        elemento.style.width = "20vh";
 
-        // const target = event.currentTarget;
-        // const cartao = document.getElementsByClassName('card-img-top')[0];
-        // cartao.className = "w-50 m-auto";
+
+    //   Seleciona(event){
+    //     const target = event.currentTarget;
+    //     const elemento = target.getElementsByClassName("cartao")[0];
+    //     elemento.style.width = "25vh";
+    //     elemento.style.transition = "width 1s";
+    //     elemento.style.cursor = "zoom-in";
+
+    //     // const target = event.currentTarget;
+    //     // const cartao = document.getElementsByClassName('card-img-top')[0];
+    //     // cartao.className = "w-75 m-auto";
+
+    // }
+
+    //   Deseleciona(event){
+    //     const target = event.currentTarget;
+    //     const elemento = target.getElementsByClassName("cartao")[0];
+    //     elemento.style.width = "20vh";
+
+    //     // const target = event.currentTarget;
+    //     // const cartao = document.getElementsByClassName('card-img-top')[0];
+    //     // cartao.className = "w-50 m-auto";
     
-} 
+    // } 
 
+    // onMouseOver={Seleciona} onMouseOut={Deseleciona}
 
+    render(){
         return (
             <section className="produtos">
                 <div className="card-group">
-                  {props.arrayProdutos.map( //this.props.arrayProdutos.map
+                  {this.state.db.map( //this.props.arrayProdutos.map
                     row=>
-                            <div key={row.Id} className="card card-produtos" onMouseOver={Seleciona} onMouseOut={Deseleciona} >   
+                            <div key={row.Id_Produto} className="card card-produtos"  >   
                                 <img className="card-img-top cartao m-auto pt-1" src={`./img/${row.Imagem}`} alt="Card image cap1" />
                                 <div className="card-body">
                                     <p className="card-text text-center descricao"><small>{row.Descricao}</small></p>
@@ -47,6 +72,7 @@ function Deseleciona(event){
             </section>
 
         );
+     };
     
 }
 

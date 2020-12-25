@@ -3,7 +3,8 @@ import React from 'react';
 
 //Componentes
 
-import {ControlProdutos} from '../../control/Control';
+// import {ControlProdutos} from '../../control/Control';
+import {ExibirProdutos} from '../../componentes/Produto';
 import {ExibirCategorias} from '../../componentes/Produto';
 
 import './style.css';
@@ -31,7 +32,7 @@ class Produtos extends React.Component {
 
               <div className="col-sm-12 col-md-9">
                 
-                <ControlProdutos/>
+                <ExibirProdutos/>
 
               </div>
             </div>

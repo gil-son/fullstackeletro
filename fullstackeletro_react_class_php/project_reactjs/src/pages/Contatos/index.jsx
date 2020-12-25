@@ -4,7 +4,10 @@ import React from 'react';
 //Componentes
 import {FormContato} from '../../componentes/Forms/index.jsx';
 import {CardContato} from '../../componentes/Cards/index.jsx';
-import {ControlMensagem} from '../../control/Control.js'
+
+import ExibirMensagem from '../../componentes/Mensagem/index.js';
+
+//import {ControlMensagem} from '../../control/Control.js'
 
 import './style.css';
 
@@ -31,7 +34,7 @@ class Contatos extends React.Component{
                         </div>
                         <div className="row justify-content-around">
                             <div className="col-sm-12" >
-                                  <ControlMensagem/>
+                                  <ExibirMensagem/>
                             </div>
                         </div>
                     </div>
