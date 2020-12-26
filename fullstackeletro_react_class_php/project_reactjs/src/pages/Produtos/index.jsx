@@ -4,14 +4,20 @@ import React from 'react';
 //Componentes
 
 // import {ControlProdutos} from '../../control/Control';
-import {ExibirProdutos} from '../../componentes/Produto';
-import {ExibirCategorias} from '../../componentes/Produto';
+import {ExibirProdutos, ExibirCategorias} from '../../componentes/Produto/index.js';
+
 
 import './style.css';
 
 
 
 class Produtos extends React.Component {
+
+
+
+
+
+  
   render() {
     return (
       <>
