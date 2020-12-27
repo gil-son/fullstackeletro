@@ -39,6 +39,15 @@ const Produtos = () =>{
           elemento.style.width = "25vh";
           elemento.style.transition = "width 1s";
           elemento.style.cursor = "zoom-in";
+
+
+          const botoes = get.getElementsByClassName("botoes")[0];
+          
+          botoes.style.visibility = "initial";
+         
+          
+          
+          
     }
 
  
@@ -47,6 +56,11 @@ const Produtos = () =>{
           const target = event.currentTarget;
           const elemento = target.getElementsByClassName("cartao")[0];
           elemento.style.width = "20vh";
+
+          const botoes = target.getElementsByClassName("botoes")[0];
+          
+          botoes.style.visibility = "hidden";
+          
    }
 
 
@@ -95,6 +109,10 @@ const Produtos = () =>{
                                       <p className="card-text text-center descricao"><small>{row.Descricao}</small></p>
                                       <p className="card-text text-center descricao"><small><strike>{row.Preco}</strike></small></p>
                                       <p className="card-text text-center preco"><small>{row.Preco_Final}</small></p>
+                                  </div>
+                                  <div className="d-flex justify-content-around mb-2 botoes">
+                                    <button className="btn btn-success w-45">Carrinho</button>
+                                    <button className="btn btn-danger w-45">Comprar</button>
                                   </div>
                               </div>
                           );
