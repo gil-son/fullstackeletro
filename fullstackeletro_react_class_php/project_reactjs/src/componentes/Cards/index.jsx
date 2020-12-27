@@ -7,7 +7,7 @@ import {Card, CardGroup} from 'react-bootstrap';
 
 
 
-export class CardsHome extends React.Component {
+export class CardDepoimento extends React.Component {
     render() {
         return (
             

@@ -30,6 +30,7 @@ class Pedido extends React.Component {
                     <FormPedido/>
                   </div>
             </div>
+            
           </div>
        
         

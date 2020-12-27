@@ -4,7 +4,7 @@ import React from 'react';
 //Componentes
 import {CarrosselProdutos} from '../../componentes/Carrossel/index.jsx';
 import {JumbotronHome} from '../../componentes/Jumbotron/index.jsx';
-import {CardsHome} from '../../componentes/Cards/index.jsx';
+import {CardDepoimento} from '../../componentes/Cards/index.jsx';
        
 import './style.css';
 
@@ -38,7 +38,7 @@ class Home extends React.Component {
 
             <div className="row">
               <div className="col-sm-12 col-md-12 contato shadow">
-                  <CardsHome/>
+                  <CardDepoimento/>
               </div>
             </div>
           </div>

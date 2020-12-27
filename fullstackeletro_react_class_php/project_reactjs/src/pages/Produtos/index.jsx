@@ -5,7 +5,7 @@ import React from 'react';
 
 // import {ControlProdutos} from '../../control/Control';
 import {ExibirProdutos, ExibirCategorias} from '../../componentes/Produto/index.js';
-
+import {CardDepoimento} from '../../componentes/Cards/index.jsx';
 
 import './style.css';
 
@@ -81,36 +81,43 @@ const Produtos = () =>{
                 
                 <ExibirProdutos/>
                 <section className="produtos">
-                <div className="card-group">
-                  
-                  {produtos.map( //this.props.arrayProdutos.map
-                    row=>
+                  <div className="card-group">
+                    
+                    {produtos.map( //this.props.arrayProdutos.map
+                      row=>
 
-                        { if(row.Categoria === categoria || categoria === "todos"){
-                            
-                        return(
-                            <div key={row.Id_Produto} className={`card card-produtos ${row.Categoria}`} onMouseOver={Selecionar}  onMouseOut={Desselecionar}>   
-                                <img className="card-img-top cartao m-auto pt-1 " src={`./img/${row.Imagem}`}  alt={`Card ${row.Categoria}`}  />
-                                <div className="card-body">
-                                    <p className="card-text text-center descricao"><small>{row.Descricao}</small></p>
-                                    <p className="card-text text-center descricao"><small><strike>{row.Preco}</strike></small></p>
-                                    <p className="card-text text-center preco"><small>{row.Preco_Final}</small></p>
-                                </div>
-                            </div>
-                         );
+                          { if(row.Categoria === categoria || categoria === "todos"){
+                              
+                          return(
+                              <div key={row.Id_Produto} className={`card card-produtos ${row.Categoria}`} onMouseOver={Selecionar}  onMouseOut={Desselecionar}>   
+                                  <img className="card-img-top cartao m-auto pt-1 " src={`./img/${row.Imagem}`}  alt={`Card ${row.Categoria}`}  />
+                                  <div className="card-body">
+                                      <p className="card-text text-center descricao"><small>{row.Descricao}</small></p>
+                                      <p className="card-text text-center descricao"><small><strike>{row.Preco}</strike></small></p>
+                                      <p className="card-text text-center preco"><small>{row.Preco_Final}</small></p>
+                                  </div>
+                              </div>
+                          );
+                          }
                         }
-                      }
-                    )}                    
-                </div>                
-            </section>
-
-
-
-
-
+                      )}                    
+                  </div>                
+                </section>
               </div>
             </div>
-          </div>
+
+
+            <div className="row my-5">
+              <div className=" mx-auto">
+                  <h3>Depoimentos</h3>
+              </div>
+            </div>
+            <div className="row">
+                <div className="mx-auto">
+                  <CardDepoimento/>
+                </div>    
+            </div>
+      </div>
 
         
         
