@@ -47,13 +47,19 @@ class Mensagem{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function Update()
+    public function Insert()
     {
         $connection = ClassConexao::conectaDB();
         $stmt = $connection->query("INSERT INTO comentario (`nome`, `mensagem`) VALUES ('$this->nome', '$this->mensagem')");
         
         // Retorna quantas linhas foram afetadas
-        return $stmt->rowCount();
+        //return $stmt->rowCount();
+
+        if($stmt->rowCount()>0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 

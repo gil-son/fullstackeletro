@@ -2,68 +2,43 @@ import React from 'react';
 
 export function FormContato(){
 
-    function registerContato(event){
-        //console.log(event); // Um objeto com propriedades é passado. Pra ver ele no console, habilite na engrenagem a opção: Preserve log. A propriedade target, trás onde o evento foi declarado
+    // function registerContato(event){
+    //     //console.log(event); // Um objeto com propriedades é passado. Pra ver ele no console, habilite na engrenagem a opção: Preserve log. A propriedade target, trás onde o evento foi declarado
 
-        event.preventDefault(); // A página por padrão é atualiada. Então isso foi previnido
+    //     event.preventDefault(); // A página por padrão é atualiada. Então isso foi previnido
         
-        console.log(event.target); // retorna o elemento daquele evento
+    //     console.log(event.target); // retorna o elemento daquele evento
         
-        //let formData = new FormData; // Essa classe é própria do JS
-        //formData.append("nome","Guilherme"); // Equivale há inputs
-        //formData.append("mensagem","Etc etc");
+    //     //let formData = new FormData; // Essa classe é própria do JS
+    //     //formData.append("nome","Guilherme"); // Equivale há inputs
+    //     //formData.append("mensagem","Etc etc");
 
-        //console.log(formData); // Objeto e seus atributos e métodos
-        //console.log(formData.get("mensagem"));
+    //     //console.log(formData); // Objeto e seus atributos e métodos
+    //     //console.log(formData.get("mensagem"));
 
         
-         let formData = new FormData(event.target) // recebe o elemento com os seus valores e passa isso para objeto
-         console.log(formData.get("mensagem"));
+    //      let formData = new FormData(event.target) // recebe o elemento com os seus valores e passa isso para objeto
+    //      console.log(formData.get("mensagem"));
 
-         // Normalmente se constói uma api json e passa para o backend
+    //      // Normalmente se constói uma api json e passa para o backend
 
-        // Página que receberá os dados
-        const url = "http://localhost/Recode%20Pro/Atividade/fullstackeletro_react_class_php/model/mainMensagens.php"; 
+    //     // Página que receberá os dados
+    //     const url = "http://localhost/Recode%20Pro/Atividade/fullstackeletro_react_class_php/model/mainMensagens.php"; 
         
-        //Padrão GET, mas no fetch será usado o POST. Se passa 1 parâmetro no fetch, usa GET, se 2 parâmetros usa POST (dados enviados)
+    //     //Padrão GET, mas no fetch será usado o POST. Se passa 1 parâmetro no fetch, usa GET, se 2 parâmetros usa POST (dados enviados)
 
-        // (url, obj literal)
-        fetch(url,{ 
-            method: "POST", 
-            body: formData
-        })
-    }
+    //     // (url, obj literal)
+    //     fetch(url,{ 
+    //         method: "POST", 
+    //         body: formData
+    //     })
+    // }
     
     
         return(
-            <>
+            <div>
                 <h3>Formulário de Contato</h3>
-                <form onSubmit={registerContato}>
-                        <div className="form-group">
-                            <label for="inome">Nome</label>
-                            <input type="text" className="form-control" id="inome" name="nome"  placeholder="Digite o seu nome..." required/>
-                        </div>
-                        <div className="form-group">
-                            <label for="imensagem">Mensagem</label>
-                            <textarea  className="form-control" id="imensagem" name="mensagem" rows="5" cols="100" placeholder="Digite a sua mensagem..." required></textarea>                       
-                        </div>
-                    <button type="submit" className="btn btn-danger px-4">Enviar</button>
-                </form>
-                            
-                {/* <form action="http://localhost/Recode%20Pro/Atividade/fullstackeletro_react_class_php/model/mainMensagens.php" method="POST">
-                            <div className="form-group">
-                                <label for="inome">Nome</label>
-                                <input type="text" className="form-control" id="inome" name="nome"  placeholder="Digite o seu nome..."/>
-                            </div>
-                            <div className="form-group">
-                                <label for="imensagem">Mensagem</label>
-                                <textarea  className="form-control" id="imensagem" name="mensagem" rows="5" cols="100" placeholder="Digite a sua mensagem..."></textarea>                       
-                            </div>
-                        <button type="submit" className="btn btn-danger px-4">Enviar</button>
-                    </form> */}
-
-
-            </>
+            </div>
         );
    
 }
@@ -80,7 +55,7 @@ export function FormPedido(){
             console.log(formData.get("nome")," - ",formData.get("produto"));
 
 
-           const url = "http://localhost/Recode%20Pro/Atividade/fullstackeletro_react_class_php/model/mainPedidos.php";
+           const url = "http://localhost/Recode%20Pro/GIT_fullstackeletro/fullstackeletro/fullstackeletro_react_class_php/model/MainPedidos.php";
        
             fetch(url,{ 
                 method: "POST", 
