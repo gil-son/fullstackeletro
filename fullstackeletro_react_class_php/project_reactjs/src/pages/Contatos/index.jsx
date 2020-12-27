@@ -17,7 +17,7 @@ const Contatos = () => {
 
             const[dados, setDados] = React.useState([]);
             const[render, setRender] = React.useState(false);
-
+            const[mensagem, setMensagem] = React.useState(false);
 
             React.useEffect( async () =>{
                 console.log("Trouxe as Mensagens");
@@ -55,6 +55,14 @@ const Contatos = () => {
                 console.log(dadosValidados);
                 setRender(!render);
               })
+
+              setTimeout(() =>{ setMensagem(true)}, 0);
+              
+              setTimeout( () =>{setMensagem(false)}, 3000);
+              
+              document.getElementById('inome').value="";
+              document.getElementById('imensagem').value="";
+
       }
     
    
@@ -85,7 +93,9 @@ const Contatos = () => {
                                       </div>
                                   <button type="submit" className="btn btn-danger px-4">Enviar</button>
                               </form>
-                                          
+                              {mensagem && <div class=" d-flex alert alert-success mx-auto my-4 w-75 justify-content-around" role="alert">
+                                Cadastro efetuado! 
+                                </div>}             
                               {/* <form action="http://localhost/Recode%20Pro/Atividade/fullstackeletro_react_class_php/model/mainMensagens.php" method="POST">
                                           <div className="form-group">
                                               <label for="inome">Nome</label>
