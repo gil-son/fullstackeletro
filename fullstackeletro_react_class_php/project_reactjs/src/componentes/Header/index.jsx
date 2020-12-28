@@ -11,7 +11,7 @@
  function BaseMenu(props){
      const {location} = props;
  
-         return(
+         return( 
              
                      <Navbar className="navbar-dark py-4" bg="danger" expand="lg" >
                          <Navbar.Brand as={Link} href="/" to = "/">

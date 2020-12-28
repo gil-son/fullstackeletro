@@ -16,7 +16,7 @@ import Login from './pages/Login';
 class Routes extends React.Component{
     render(){
         return(
-            // <BrowserRouter>
+            // <BrowserRouter> 
                 <Switch>
                     <Route path="/" exact component={Home}/>
                     <Route path="/produtos" exact component={Produtos}/>
