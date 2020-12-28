@@ -9,6 +9,15 @@
  import './style.css';
  
  function BaseMenu(props){
+
+    // let nome = "";
+
+    // const [nome, setNome] = React.useState("");
+
+    //  React.useEffect( () => {
+    //     nome = localStorage.getItem('@project_reactjs/username');
+    //  },[])
+    // trazer a propriedade do login para cá, assim ao fazer o acesso, aqui poderá ser alterado
      const {location} = props;
  
          return( 
@@ -36,7 +45,7 @@
                                      <Nav.Link as={Link} href="/contatos" to = "/contatos">Contatos</Nav.Link>
                                  </Nav.Item>
                              </Nav>
-                            
+                                 {/* {nome} */}
                              <Nav activeKey={location.pathname}>
                                     <Nav.Item className="">
                                         <Nav.Link as={Link} href="/login" to="/login">Login</Nav.Link>
