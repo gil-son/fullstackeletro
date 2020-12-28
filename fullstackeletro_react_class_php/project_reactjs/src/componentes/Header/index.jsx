@@ -19,7 +19,7 @@
                          </Navbar.Brand>
                          <Navbar.Toggle aria-controls="item-menu"/>
                          <Navbar.Collapse id="item-menu">
-                             <Nav activeKey={location.pathname} className="ml-auto mr-3">
+                             <Nav activeKey={location.pathname} className="d-flex ml-auto mr-auto">
                                  <Nav.Item>
                                      <Nav.Link as={Link} href="/" to = "/">Home</Nav.Link>
                                  </Nav.Item>
@@ -36,6 +36,16 @@
                                      <Nav.Link as={Link} href="/contatos" to = "/contatos">Contatos</Nav.Link>
                                  </Nav.Item>
                              </Nav>
+                            
+                             <Nav activeKey={location.pathname}>
+                                    <Nav.Item className="">
+                                        <Nav.Link as={Link} href="/login" to="/login">Login</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link as={Link} href="/cadastro" to="/cadastro">Cadastre-se</Nav.Link>   
+                                    </Nav.Item>
+                             </Nav>
+                             
                          </Navbar.Collapse>
                      </Navbar>
                  
