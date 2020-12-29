@@ -4,7 +4,7 @@ abstract class ClassConexao{
     
     public function conectaDB()
     {
-        try{
+        try{ 
             $con = new PDO("mysql:host=localhost;dbname=fullstackeletro","root","");         
             return $con;
         }catch(PDOException $erro){
