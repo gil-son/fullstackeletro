@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-
+// Do Login adiante, podesse habilitar páginas e criar sub-páginas+router dentro do painel do usuário OU sub-páginas+Sonnet
 
 
 import {MenuUsuario, Nome, BaseMenuUsuario} from './Menu/';
