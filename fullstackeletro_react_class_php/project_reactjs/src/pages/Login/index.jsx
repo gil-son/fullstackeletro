@@ -4,6 +4,8 @@ import React from 'react';
 
 
 
+import {MenuUsuario, Nome, BaseMenuUsuario} from './Menu/';
+
 
  const Input = ({label, ...props}) =>{
 
@@ -17,9 +19,11 @@ import React from 'react';
 }
 
 
-function Login(){
+export function Login(){
     const [nome, setNome] = React.useState("");
     const [senha, setSenha] = React.useState("");
+
+    const [cliente, setCliente] = React.useState("x")
    
     let username = localStorage.getItem('@project_reactjs/username');
     console.log(username);
@@ -37,7 +41,9 @@ function Login(){
         }).then((response) => response.json()).then((dadosValidados) =>{
             console.log(dadosValidados);
             localStorage.setItem('@project_reactjs/username', dadosValidados[1]);
-            window.location.reload();
+            // const att = localStorage.getItem('@project_reactjs/username');
+            // setCliente(att);
+            window.location.reload(); // renderiza de novo, os states são pegos do início. O ideal é ir para outra página ou useEffect, mas teria que renderizar tudo
         }) 
         
     }
@@ -63,15 +69,23 @@ function Login(){
                 <div className="col-12 col-sm-6 bg-primary d-flex justify-content-around">
                     <img src="https://cdn.pixabay.com/photo/2019/01/28/11/56/registration-3960205_960_720.jpg" alt="Cadastro" className="w-75"/>
                 </div>
-            
+                {/* <Nome obterNome={cliente} /> */}
+                <p>{cliente}</p>
             </div>
         </div>
         );
     }else{
         return(
         <div className="container-fluid bg-light">
+             
+             <Nome obterNome={username}/>
+            
              <p>{`Bem vindo ${username}`}</p>
-             <button className="btn btn-danger" onClick={ () => {localStorage.removeItem('@project_reactjs/username'); window.location.reload();} }>Sair</button>
+             <MenuUsuario/>
+             <button className="btn btn-danger my-5" onClick={ () => {localStorage.removeItem('@project_reactjs/username'); window.location.reload();} }>Sair</button>
+             {/* <Nome obterNome={cliente} /> */}
+             <p>{cliente}</p>
+
         </div>
         
         );
@@ -79,7 +93,7 @@ function Login(){
 }
 
 
-export default Login;
+
 
 
  

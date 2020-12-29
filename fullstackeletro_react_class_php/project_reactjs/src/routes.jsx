@@ -10,7 +10,7 @@ import Contatos from './pages/Contatos';
 
 /* Pages Users*/
 import Cadastro from './pages/Cadastro';
-import Login from './pages/Login';
+import {Login} from './pages/Login';
 
 
 class Routes extends React.Component{
