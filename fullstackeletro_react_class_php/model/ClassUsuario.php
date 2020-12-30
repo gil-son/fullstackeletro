@@ -10,7 +10,7 @@ class Usuario{
     public $nome;
     public $senha;
 
-    public static function getAll()  // Adm
+    public static function getAll()  // Adm //Criar Classe Associativa para Endereco
     {
         $connection = ClassConexao::conectaDB();
 
@@ -19,13 +19,18 @@ class Usuario{
 
     }
 
-    public function Insert()
+    public function cadastroUsuario()
     {
         $connection = ClassConexao::conectaDB();
         $stmt = $connection->query("INSERT INTO usuario (`nome`,`senha`) VALUES ('$this->nome','$this->senha')");
 
         if($stmt->rowCount()>0){ return true;}else{ return false;}
 
+    }
+
+    public function cadastroEndereco()
+    {
+        // No momento do cadastro essa tabela pode ser criada obtendo o id do usuario ou após o cadastro, se o usuario preencher
     }
 
     public function Login()

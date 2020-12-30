@@ -48,7 +48,7 @@ export function Login(){
         
     }
 
-    if(username === null){
+    if(username === null || username === 'undefined'){
         return(
 
 

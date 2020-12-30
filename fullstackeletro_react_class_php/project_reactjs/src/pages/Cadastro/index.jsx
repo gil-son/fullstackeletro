@@ -3,8 +3,45 @@ import React from 'react';
  const Cadastro = () =>{
 
     const [nome, setNome] = React.useState("");
+    const [email, setEmail] = React.useState("");
     const [senha, setSenha] = React.useState("");
+
+
+    const [cep, setCep] = React.useState("");
+    const [logradouro, setLogradouro] = React.useState("");
+    const [complemento, setComplemento] = React.useState("");
+    const [uf, setUf] = React.useState("");
+
+
+
+
+
+    // Mensagem de Confirmação de Cadastro
     const [mensagem, setMensagem] = React.useState(false);
+
+    
+    async function getCep(event){
+                   
+        console.log(event.target.value.length);
+        if(event.target.value.length === 8){
+            setCep(event.target.value);
+
+            // url da API
+            const url = `https://viacep.com.br/ws/${cep}/json/`;
+            
+            const response = await fetch(url);
+            const dados = await response.json();
+
+            
+            //modo 1
+                //document.getElementById('ilogradouro').value = dados.logradouro;
+            //modo 2
+                setLogradouro(dados.logradouro);
+                setComplemento(dados.complemento);
+                setUf(dados.uf);
+        }
+    }
+
 
 
     function cadastro(event){
@@ -16,6 +53,8 @@ import React from 'react';
         console.log("Form Data:")
         console.log(formData.get("nome"));
         console.log(formData.get("senha"));
+
+        if(formData.get("nome").length > 2){
         
         const url = "http://localhost/Recode%20Pro/GIT_fullstackeletro/fullstackeletro/fullstackeletro_react_class_php/model/MainUsuario.php";
 
@@ -26,14 +65,24 @@ import React from 'react';
         }).then( (response) => response.json()).then((dadosValidados) =>{
             console.log(dadosValidados);
             setMensagem(true);
+
+            if(dadosValidados){
+                console.log("Cadastro Realizado");
+            }
         })
 
         setTimeout( () => { setMensagem(false) },3000)
 
 
-        console.log("Cadastro em andamento");
+        
         setNome("");
         setSenha("");
+
+    }else{
+        alert("Todos o Campos precisam ter no mínimo 3 caracteres!");
+    }
+
+
     }
 
 
@@ -44,15 +93,43 @@ import React from 'react';
             </div>
             <div className="row">
                 <div className="col-12 col-sm-6 bg-success d-flex justify-content-around">
-                    <form className="my-5" onSubmit={cadastro}>
-                        <div className="form-group">
-                            <label>Nome:</label>
-                            <input className="form-control" type="text" name="nome" id="inome" value={nome} onChange={(event) => setNome(event.target.value)}/>
-                        </div>
-                        <div className="form-group">
-                            <label>Senha:</label>   
-                            <input className="form-control" type="text" name="senha" id="isenha" value={senha} onChange={(event) => setSenha(event.target.value)} />
-                        </div>
+                    <form className="my-5 w-100" onSubmit={cadastro}>
+                        <fieldset> <legend> Sobre </legend>
+                            <div className="form-group">
+                                <label>Nome:</label>
+                                <input className="form-control" type="text" name="nome" id="inome" value={nome} onChange={(event) => setNome(event.target.value)}/>
+                            </div>
+                            <div className="form-group">
+                                <label>E-mail:</label>
+                                <input className="form-control" type="text" name="email" id="iemail" value={email} onChange={(event) => setEmail(event.target.value)}/>
+                            </div>
+                            <div className="form-group">
+                                <label>Senha:</label>   
+                                <input className="form-control" type="text" name="senha" id="isenha" value={senha} onChange={(event) => setSenha(event.target.value)} />
+                            </div>
+                        </fieldset>
+                        <fieldset> <legend>Endereço</legend>
+                       
+                            <div class="row my-1">
+                                <div class="col">
+                                    <input type="text" id="icep"  class="form-control" placeholder="CEP..." onChange={getCep}/>
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="ilogradouro" value={logradouro} class="form-control" placeholder="Logradouro..." onChange={(event) => setLogradouro(event.target.value)}/>
+                                </div>
+                            </div>
+                            <div class="row my-1">
+                                <div class="col">
+                                    <input type="text" id="icomplemento" value={complemento} class="form-control" placeholder="Complemento..."/>
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="iuf" value={uf} class="form-control" placeholder="UF..."/>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+
                         <button className="btn btn-danger w-100" >Cadastrar</button>
                         {
                             mensagem && <div class=" d-flex alert alert-success mx-auto my-4 w-100 justify-content-around" role="alert">Cadastro efetuado!</div>

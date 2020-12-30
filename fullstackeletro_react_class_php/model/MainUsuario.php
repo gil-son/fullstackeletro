@@ -5,15 +5,19 @@ header("Content-type: json");
 
 include_once('ClassUsuario.php');
 
-$usuario = new Usuario();
-$usuario->nome = $_POST['nome'];
-$usuario->senha = $_POST['senha'];
 
+if (strlen($_POST['nome']) > 2 && strlen($_POST['senha']) > 2) {
 
-$validate = $usuario->Insert();
+    $usuario = new Usuario();
+    $usuario->nome = $_POST['nome'];
+    $usuario->senha = $_POST['senha'];
 
-if($validate){
-    echo json_encode(true);
-}else{
-    echo json_encode(false);
 }
+
+    $validate = $usuario->cadastroUsuario();
+
+    if($validate){
+        echo json_encode(true);
+    }else{
+        echo json_encode(false);
+    }
