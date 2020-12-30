@@ -1,6 +1,9 @@
 import React from 'react';
+import {Modal, Button} from 'react-bootstrap';
 
  const Cadastro = () =>{
+
+    // Form
 
     const [nome, setNome] = React.useState("");
     const [email, setEmail] = React.useState("");
@@ -13,6 +16,12 @@ import React from 'react';
     const [uf, setUf] = React.useState("");
 
 
+
+    // Modal
+
+    const [show, setShow] = React.useState(false);
+    // const handleClose = () => React.setShow(false);
+    // const handleShow = () => React.setShow(true);
 
 
 
@@ -79,7 +88,11 @@ import React from 'react';
         setSenha("");
 
     }else{
-        alert("Todos o Campos precisam ter no mínimo 3 caracteres!");
+        // alert("Todos o Campos precisam ter no mínimo 3 caracteres!");
+
+        setShow(true);
+
+
     }
 
 
@@ -130,16 +143,74 @@ import React from 'react';
 
                         </fieldset>
 
-                        <button className="btn btn-danger w-100" >Cadastrar</button>
+                        <button className="btn btn-danger w-100">Cadastrar</button>
                         {
                             mensagem && <div class=" d-flex alert alert-success mx-auto my-4 w-100 justify-content-around" role="alert">Cadastro efetuado!</div>
                         }  
                     </form>
+
+                    {/* <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                    
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                                </div>
+                                <div class="modal-body">
+                                <p>Some text in the modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                         </div>
+                    </div> */}
+
+
+
+                    
+
+
+
+
+
+
+
                 </div>
                 <div className="col-12 col-sm-6 bg-primary d-flex justify-content-around">
                     <img src="https://cdn.pixabay.com/photo/2017/10/14/11/30/block-chain-2850276_960_720.jpg" alt="Cadastro" className="w-75"/>
                 </div>
                
+            </div>
+            <div className="row">
+
+                    
+                    <>
+                        <Modal
+                            show={show}
+                            onHide={() => setShow(false)}
+                            dialogClassName="modal-90w"
+                            aria-labelledby="example-custom-modal-styling-title"
+                        >
+                            <Modal.Header closeButton>
+                            <Modal.Title id="example-custom-modal-styling-title">
+                                Atenção!
+                            </Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                            <p>
+                                Os Campos precisam ter o mínimo de 3 caracteres!
+                            </p>
+                            </Modal.Body>
+                            <Button variant="danger" size="sm" onClick={() => setShow(false)}>
+                                Entendi
+                            </Button>
+                        </Modal>
+                        </>
+                
             </div>
         </div>
     );
