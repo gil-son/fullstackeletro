@@ -10,7 +10,7 @@ module.exports =  function(app){
     var connection = db();
 
     app.post("/comment", function(req, res){
-        const {nome, comentario} = req.body;
+        const {nome, mensagem} = req.body;
      
         
         // Debug
@@ -18,7 +18,7 @@ module.exports =  function(app){
         
 
         // Insert                     INSERT INTO `fullstackeletro`.`comentario` (`nome`, `mensagem`) VALUES ('aaa', 'texto');
-        connection.query(`INSERT INTO comentario(nome, mensagem) VALUES('${nome}' , '${comentario}')`,
+        connection.query(`INSERT INTO comentario(nome, mensagem) VALUES('${nome}' , '${mensagem}')`,
         (error, result) => {
     
             // console.log("Dados:");
@@ -30,7 +30,8 @@ module.exports =  function(app){
                 res.send(error);
             }else{
                 res.status(201).json({
-                    message: "Mensagem Cadastrada com Sucesso!"
+                    // message: "Mensagem Cadastrada com Sucesso!"
+                    message:true
                 });                
             }
             
