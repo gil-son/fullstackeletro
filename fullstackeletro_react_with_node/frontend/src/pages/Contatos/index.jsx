@@ -111,7 +111,7 @@ const Contatos = () => {
                                       </div>
                                   <button type="submit" className="btn btn-danger px-4">Enviar</button>
                               </form>
-                              {mensagem && <div class=" d-flex alert alert-success mx-auto my-4 w-75 justify-content-around" role="alert">
+                              {mensagem && <div className=" d-flex alert alert-success mx-auto my-4 w-75 justify-content-around" role="alert">
                                 Cadastro efetuado! 
                                 </div>}             
                               {/* <form action="http://localhost/Recode%20Pro/Atividade/fullstackeletro_react_class_php/model/mainMensagens.php" method="POST">
