@@ -36,7 +36,7 @@ export function Login(){
        
         const url = "http://localhost/Recode%20Pro/GIT_fullstackeletro/fullstackeletro/fullstackeletro_react_class_php/model/MainUsuarioLogin.php";
         fetch(url,{
-            method: "POST",
+            method: "POST", 
             body: formData
         }).then((response) => response.json()).then((dadosValidados) =>{
             console.log(dadosValidados);
