@@ -20,8 +20,8 @@ class Lojas extends React.Component{
                     <div className="row">
                       <div className="col bg-light contato">
                           
-                        <table class="table shadow">
-                          <thead class="thead-dark">
+                        <table className="table shadow">
+                          <thead className="thead-dark">
                             <tr>
                                 <th scope="col">Cidade</th>
                                 <th scope="col">Endereço</th>
