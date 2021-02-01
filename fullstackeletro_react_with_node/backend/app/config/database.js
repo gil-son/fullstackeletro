@@ -6,6 +6,6 @@ module.exports = function(){
         host:'localhost',
         user:'',
         password:'',
-        database:''
+        database:'fullstackeletro'
     });
 }
