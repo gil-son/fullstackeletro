@@ -68,6 +68,12 @@
                              </Nav>
                                  {/* <Nome obterNome/>  */}
                              <Nav activeKey={location.pathname}>
+                             <Nav.Item className="">
+                                    <Nav.Link as={Link} href="/lista" to="/lista">Lista</Nav.Link>
+                                         </Nav.Item>
+                                    <Nav.Item className="">
+                                        <Nav.Link as={Link} href="/carrinho" to="/carrinho">Carrinho</Nav.Link>
+                                    </Nav.Item>
                                     <Nav.Item className="">
                                         <Nav.Link as={Link} href="/login" to="/login">Login</Nav.Link>
                                     </Nav.Item>
