@@ -123,20 +123,20 @@ import {Modal, Button} from 'react-bootstrap';
                         </fieldset>
                         <fieldset> <legend>Endereço</legend>
                        
-                            <div class="row my-1">
-                                <div class="col">
-                                    <input type="text" id="icep"  class="form-control" placeholder="CEP..." onChange={getCep}/>
+                            <div className="row my-1">
+                                <div className="col">
+                                    <input type="text" id="icep"  className="form-control" placeholder="CEP..." onChange={getCep}/>
                                 </div>
-                                <div class="col">
-                                    <input type="text" id="ilogradouro" value={logradouro} class="form-control" placeholder="Logradouro..." onChange={(event) => setLogradouro(event.target.value)}/>
+                                <div className="col">
+                                    <input type="text" id="ilogradouro" value={logradouro} className="form-control" placeholder="Logradouro..." onChange={(event) => setLogradouro(event.target.value)}/>
                                 </div>
                             </div>
-                            <div class="row my-1">
-                                <div class="col">
-                                    <input type="text" id="icomplemento" value={complemento} class="form-control" placeholder="Complemento..."/>
+                            <div className="row my-1">
+                                <div className="col">
+                                    <input type="text" id="icomplemento" value={complemento} className="form-control" placeholder="Complemento..."/>
                                 </div>
-                                <div class="col">
-                                    <input type="text" id="iuf" value={uf} class="form-control" placeholder="UF..."/>
+                                <div className="col">
+                                    <input type="text" id="iuf" value={uf} className="form-control" placeholder="UF..."/>
                                 </div>
                             </div>
 
@@ -145,24 +145,24 @@ import {Modal, Button} from 'react-bootstrap';
 
                         <button className="btn btn-danger w-100">Cadastrar</button>
                         {
-                            mensagem && <div class=" d-flex alert alert-success mx-auto my-4 w-100 justify-content-around" role="alert">Cadastro efetuado!</div>
+                            mensagem && <div className=" d-flex alert alert-success mx-auto my-4 w-100 justify-content-around" role="alert">Cadastro efetuado!</div>
                         }  
                     </form>
 
-                    {/* <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
+                    {/* <div className="modal fade" id="myModal" role="dialog">
+                        <div className="modal-dialog">
 
                     
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Modal Header</h4>
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                <button type="button" className="close" data-dismiss="modal">&times;</button>
+                                <h4 className="modal-title">Modal Header</h4>
                                 </div>
-                                <div class="modal-body">
+                                <div className="modal-body">
                                 <p>Some text in the modal.</p>
                                 </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <div className="modal-footer">
+                                <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
 
