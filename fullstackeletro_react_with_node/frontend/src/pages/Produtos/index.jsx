@@ -1,5 +1,6 @@
 //Dependências e Libs
 import React from 'react';
+import {useDispatch} from 'react-redux';
 
 //Componentes
 
@@ -12,6 +13,8 @@ import './style.css';
 
 
 const Produtos = () =>{
+
+  const dispatch = useDispatch();
 
   const[produtos, setProdutos] = React.useState([]);
   let[categoria, setCategoria] = React.useState("todos");
@@ -31,6 +34,8 @@ const Produtos = () =>{
       //   console.log(event.target.currentSrc);
        
          const get = event.currentTarget;
+
+         
          console.log(get);
 
           const elemento = get.getElementsByClassName("cartao")[0];  // obtendo o único índice
@@ -64,7 +69,78 @@ const Produtos = () =>{
    }
 
 
+    function carrinhoImg(event){
+      
+
+
+      const target = event.currentTarget;
+      console.log(target);
+
+
+      const descricao = target.getElementsByClassName("descricao")[0].innerHTML;
+      const precofinal = target.getElementsByClassName("precofinal")[0].innerHTML;
+      
+      console.log(`descricao: ${descricao}`);
+      console.log(`precofinal: ${precofinal}`);
+      
+
+      const objCompras = {
+        produto: descricao,
+        preco: precofinal,
+        quantidade: 1
+    }
+
+    
+
+    dispatch( { type: "ADICIONARCARRINHO", value: objCompras})
+
+
+    }
+
+    
+    function carrinhoBotao(event){
+      
+      // const get = document.getElementsByClassName('getScopo');
+      // console.log("get");
+      // console.log(get);
+
+      // const categoria = document.getElementById('categoria');
+      // const imagem = document.getElementById('imagem').src;
+      // const descricao = document.getElementById('descricao').innerHTML;
+      // const preco = document.getElementById('preco').innerHTML;
+      // const precofinal = document.getElementById('precofinal').innerHTML;
+
+
+      // console.log(`categoria: ${categoria}`);
+      // console.log(`imagem: ${imagem}`);
+      // console.log(`descricao: ${descricao}`);
+      // console.log(`preco: ${preco}`);
+      // console.log(`precofinal: ${precofinal}`);
+      
+      // const target = event.currentTarget;
+      // console.log(target);
+
+
+      // const descricao = target.getElementsByClassName("descricao")[0].innerHTML;
+      // const precofinal = target.getElementsByClassName("precofinal")[0].innerHTML;
+      
+      // console.log(`descricao: ${descricao}`);
+      // console.log(`precofinal: ${precofinal}`);
+
+      // const objCompras = {
+      //     produto: descricao,
+      //     preco: precofinal,
+      //     quantidade: 1
+      // }
+
+      
+
+     // dispatch( { type: "ADICIONAR", value: objCompras})
+     
+    }
+
   
+    
   
     return (
       <>
@@ -103,15 +179,15 @@ const Produtos = () =>{
                           { if(row.categoria === categoria || categoria === "todos"){
                               
                           return(
-                              <div key={row.Idproduto} className={`card card-produtos ${row.categoria}`} onMouseOver={Selecionar}  onMouseOut={Desselecionar}>   
-                                  <img className="card-img-top cartao m-auto pt-1 " src={`./img/${row.imagem}`}  alt={`Card ${row.categoria}`}  />
+                              <div key={row.Idproduto} className={`card card-produtos ${row.categoria}`} onMouseOver={Selecionar}  onMouseOut={Desselecionar} onClick={carrinhoImg} id="getScopo">   
+                                  <img className="card-img-top cartao m-auto pt-1 " src={`./img/${row.imagem}`}  alt={`Card ${row.categoria}`} id="imagem"  />
                                   <div className="card-body">
-                                      <p className="card-text text-center descricao"><small>{row.descricao}</small></p>
-                                      <p className="card-text text-center descricao"><small><strike>{row.preco}</strike></small></p>
-                                      <p className="card-text text-center preco"><small>{row.precofinal}</small></p>
+                                      <p className="card-text text-center"><small id="descricao" className="descricao">{row.descricao}</small></p>
+                                      <p className="card-text text-center"><small><strike id="preco">{row.preco}</strike></small></p>
+                                      <p className="card-text text-center"><small id="precofinal" className="precofinal">{row.precofinal}</small></p>
                                   </div>
                                   <div className="d-flex justify-content-around mb-2 botoes">
-                                    <button className="btn btn-success w-45">Carrinho</button>
+                                    <button className="btn btn-success w-45" onClick={carrinhoBotao}>Carrinho</button>
                                     <button className="btn btn-danger w-45">Comprar</button>
                                   </div>
                               </div>
