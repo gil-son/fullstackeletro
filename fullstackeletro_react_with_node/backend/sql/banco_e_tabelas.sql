@@ -1,5 +1,6 @@
 /*Criação do banco de dados fullstackeletro */
-CREATE DATABASE fullstackeletro;
+CREATE DATABASE fullstackeletro_node;
+USE fullstackeletro_node;
 
 /*Criação da tabela que contém os produtos*/
 CREATE TABLE `produto` (
@@ -40,6 +41,7 @@ CREATE TABLE `comentario` (
 /*Criação da tabela que terá os pedidos. A inserção dos dados será pelo front-end (ReactJS)*/
 CREATE TABLE `pedido` (
   `num_pedido` int NOT NULL AUTO_INCREMENT,
+  `id_produto` int NOT NULL,
   `nome_cliente` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `endereco` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `telefone` varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -54,12 +56,15 @@ CREATE TABLE `pedido` (
 /*Joins de rankeamento*/
 
 /*Categoria mais consumida*/
+/*
 SELECT categoria, SUM(quantidade) FROM produto
 INNER JOIN pedido
 ON idproduto = num_pedido
 GROUP BY categoria ORDER BY SUM(quantidade) DESC;
-
+*/
 /*O cliente que mais comprou em quantidade*/
+/*
 SELECT nome_cliente, descricao, MAX(quantidade) FROM produto
 INNER JOIN pedido
 ON idproduto = num_pedido;
+*/
