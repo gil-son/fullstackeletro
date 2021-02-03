@@ -31,7 +31,7 @@ export default function Carrinho() {
 
 
     return (
-        <div className="container-fluid bg-light">
+        <div className="container-fluid bg-light shadow">
         <div className="row">
           <h2 className="ml-3">Carrinho</h2>
           <hr/>
@@ -40,7 +40,7 @@ export default function Carrinho() {
 
            
 
-            <div className="col-sm-12 col-md-8 bg-primary">                          
+            <div className="col-sm-12 col-md-8 shadow" style={{"height":"500px","overflow": "scroll" }}>                          
                 <table className="table">
                     <thead>
                         <tr>
@@ -80,14 +80,14 @@ export default function Carrinho() {
                     </tbody>
                 </table>
             </div>
-            <div className="col-sm-12 col-md-4 bg-success">       
+            <div className="col-sm-12 col-md-4 shadow">       
                 <form onSubmit={limparCarrinho}>
                     <button className="btn btn-dark btn-lg btn-block">Limpar Carrinho</button>
                 </form>                       
             </div>
 
           </div>
-          <div className="row justify-content-around bg-secondary">
+          <div className="row justify-content-around">
               <div className="col-sm-12" >
                    ...
               </div>
