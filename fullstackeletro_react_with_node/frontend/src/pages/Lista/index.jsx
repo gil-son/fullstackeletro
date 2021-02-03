@@ -53,7 +53,7 @@ export default function Lista() {
 
 
     return (
-        <div className="container-fluid bg-light">
+        <div className="container-fluid bg-light shadow" >
             <div className="row">
                 <h2 className="ml-3">Lista</h2>
                 <hr />
@@ -62,7 +62,7 @@ export default function Lista() {
 
 
 
-                <div className="col-sm-12 col-md-7 bg-primary">
+                <div className="col-sm-12 col-md-7 shadow" style={{"height":"500px","overflow": "scroll" }}>
                     <table className="table">
                         <thead>
                             <tr>
@@ -96,7 +96,7 @@ export default function Lista() {
                         </tbody>
                     </table>
                 </div>
-                <div className="col-sm-12 col-md-5 bg-success">
+                <div className="col-sm-12 col-md-5 shadow">
 
                     <form onSubmit={adicionarLista}>
 
@@ -133,18 +133,18 @@ export default function Lista() {
                             required />
                         </div>
 
-                        <button className="btn btn-danger btn-lg btn-block" id="Enviar" type="submit" value="Confirmar" >Adicionar Iten</button>
+                        <button className="btn btn-danger btn-lg btn-block my-2" id="Enviar" type="submit" value="Confirmar" >Adicionar Iten</button>
                     </form>
                     <form onSubmit={limparLista}>
-                        <button className="btn btn-dark btn-lg btn-block">Limpar Lista</button>
+                        <button className="btn btn-dark btn-lg btn-block my-2">Limpar Lista</button>
                     </form>
 
                 </div>
 
             </div>
-            <div className="row justify-content-around bg-secondary">
+            <div className="row justify-content-around">
                 <div className="col-sm-12" >
-                    ...
+                    
               </div>
             </div>
         </div>
