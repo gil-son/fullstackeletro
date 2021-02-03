@@ -30,7 +30,7 @@ const Contatos = () => {
 
 
 
-          function registerContato(event){ 
+        async function registerContato(event){ 
           
               event.preventDefault(); 
               console.log(event.target); 
@@ -41,8 +41,8 @@ const Contatos = () => {
               console.log(formData.get("mensagem"));
              
               var obj =  {
-                nome:"Fulanx",
-                mensagem:"Testx"
+                nome:formData.get("nome"),
+                mensagem:formData.get("mensagem")
              };
 
               var obj2 = JSON.stringify(obj)
@@ -74,12 +74,16 @@ const Contatos = () => {
             //     setRender(!render);
             //   })
 
-            //   setTimeout(() =>{ setMensagem(true)}, 0);
+
+              setRender(true); // temporário
+              setTimeout(() =>{ setMensagem(true)}, 0);
               
-            //   setTimeout( () =>{setMensagem(false)}, 3000);
+              setTimeout( () =>{setMensagem(false)}, 3000);
               
-            //   document.getElementById('inome').value="";
-            //   document.getElementById('imensagem').value="";
+             document.getElementById('inome').value="";
+             document.getElementById('imensagem').value="";
+             window.location.href = "http://localhost:3000/contatos" // temporário
+            
 
       }
     
