@@ -179,7 +179,7 @@ const Produtos = () =>{
                           { if(row.categoria === categoria || categoria === "todos"){
                               
                           return(
-                              <div key={row.Idproduto} className={`card card-produtos ${row.categoria}`} onMouseOver={Selecionar}  onMouseOut={Desselecionar} onClick={carrinhoImg} id="getScopo">   
+                              <div key={row.idproduto} className={`card card-produtos ${row.categoria}`} onMouseOver={Selecionar}  onMouseOut={Desselecionar} onClick={carrinhoImg} id="getScopo">   
                                   <img className="card-img-top cartao m-auto pt-1 " src={`./img/${row.imagem}`}  alt={`Card ${row.categoria}`} id="imagem"  />
                                   <div className="card-body">
                                       <p className="card-text text-center"><small id="descricao" className="descricao">{row.descricao}</small></p>
