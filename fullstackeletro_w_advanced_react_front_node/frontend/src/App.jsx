@@ -1,13 +1,22 @@
 
 import React from 'react';
 import {BrowserRouter} from 'react-router-dom';
+import {lazy, Suspense} from 'react';
+import wait from './code-splitting/img/wait.gif';
 
-import {Header} from './componentes/Header';
-import Footer from './componentes/Footer';
-import Routes from './routes';
+// import {Header} from './componentes/Header';
+// import Footer from './componentes/Footer';
+// import Routes from './routes';
+
+// Code splitting
+
+const Header = lazy( () => import('./code-splitting/Header'));
+const Footer = lazy( () => import('./code-splitting/Footer'));
+const Routes = lazy( () => import('./code-splitting/Routes'));
 
 
-import './global.css';
+
+// import './global.css';
 
  class App extends React.Component {
     render(){
@@ -15,13 +24,28 @@ import './global.css';
             <>
                 <BrowserRouter>
                     <header>
-                        <Header/>
+                        <Suspense fallback ={
+                            <p>Carregando...</p>
+                        }
+                        >
+                            <Header/>
+                        </Suspense>
                     </header>
                     <main>
-                        <Routes/>
+                        <Suspense fallback ={
+                                <img src={wait} />
+                            }
+                            >
+                                <Routes/>
+                        </Suspense>
                     </main>
                     <footer>
-                        <Footer/>
+                        <Suspense fallback ={
+                                <p>Carregando...</p>
+                            }
+                            >
+                                <Footer/>
+                        </Suspense>
                     </footer>
                 </BrowserRouter>
             </>
