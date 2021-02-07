@@ -6,6 +6,6 @@ module.exports = function(){
         host:'localhost',
         user:'',
         password:'',
-        database:'fullstackeletro'
+        database:'fullstackeletro_node'
     });
 }
