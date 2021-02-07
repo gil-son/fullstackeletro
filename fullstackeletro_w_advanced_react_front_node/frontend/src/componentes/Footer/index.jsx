@@ -1,11 +1,6 @@
 //Dependências e libs
 import React from 'react';
 
-//Componentes
-
-//css, img etc
-import './style.css';
-
 
 class Footer extends React.Component {
     render() {
