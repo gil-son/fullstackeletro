@@ -1,0 +1,52 @@
+/* main{
+    height: 80vh;
+  
+} */
+
+/* .imagens-produtos{
+    width: 50%;
+} */
+
+
+.card-produtos{
+    min-width: 25%;
+    min-height: 410px;
+}
+
+.botoes{
+    visibility: hidden;
+}
+
+
+/* .infocard{
+    position: relative;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    font-weight: bolder;
+    padding: 5px;
+    width: 150px;
+    background-color: rgba(100, 100, 100, .8);
+    top: -50px;
+    color: rgba(255, 255, 245, .9);
+    visibility: hidden;
+
+}
+
+
+.infocard>p{
+    margin: 0;
+    padding: 0;
+}
+
+
+.descricao{
+    text-decoration: line-through;
+    font-size: 10pt;
+}
+
+.preco{
+    text-decoration: line-through;
+    font-size: 10pt;
+    color: yellowgreen;
+} */
