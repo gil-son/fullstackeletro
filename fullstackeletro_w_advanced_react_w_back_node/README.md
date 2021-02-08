@@ -10,13 +10,13 @@
 ## Executar:
 
 ### Frontend:
-### Uso do React para as renderizações em JS
-<p>No frontend ao iniciar, vai ser na porta 3001. Para iniciar 'npm start'</p>
+### Uso do React para as renderizações em JS.
+<p>No frontend ao iniciar, vai ser na porta 3001. Para iniciar 'npm start'.</p>
 
 ### Backend:
 ### Uso do Node e React Next
-<p>No backend a página Home é 100% renderizada em HTML na porta 3000. Para iniciar 'npm run dev'</p>
-<p>No backend a requisição e resposta com o banco está na porta 3333. Para iniciar 'npm start'</p>
+<p>No backend a página Home é 100% renderizada em HTML na porta 3000. Para iniciar 'npm run dev'.</p>
+<p>No backend a requisição e resposta com o banco está na porta 3333. Para iniciar 'npm start'.</p>
 
 
 #### Então, para um melhor proveito é importante executar as 3 portas em 3 terminais. As portas estão configuradas em seus respectivos package.json
