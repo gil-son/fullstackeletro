@@ -10,7 +10,7 @@
 ## Executar:
 
 ### Frontend:
-### Uso do React para as renderizações em JS.
+### Uso do React para as renderizações em JS
 <p>No frontend ao iniciar, vai ser na porta 3001. Para iniciar 'npm start'.</p>
 
 ### Backend:
