@@ -4,9 +4,7 @@
 ### Introdução
 
 <p>
-O FullStackEletro é um site desenvolvido sobre apoio e orientações da Recode Pro. Trata-se de um e-commerce de eletrodomésticos no qual começa com versões clássicas
-de desenvolvimento como HTML, CSS e JS... conforme o curso da Recode Pro vai evoluindo o projeto passa por refatorações e com isso o projeto
-passa por diversas versões tecnologicas.
+  O FullStackEletro é um site desenvolvido sobre apoio e orientações da Recode Pro. Trata-se de um e-commerce de eletrodomésticos no qual começa com versões clássicas de desenvolvimento como HTML, CSS e JS... conforme o curso da Recode Pro vai evoluindo o projeto passa por refatorações. Então fique à vontade em ver diversas formas de se fazer o mesmo e com níveis diferentes.
 </p>
 
 <hr/>
