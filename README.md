@@ -1,12 +1,11 @@
-# fullstackeletro
+# Full Stack Eletro
 
 
-### Introdução
+### Introduction
 
 <p>
-  O FullStackEletro é um site desenvolvido sobre apoio e orientações da Recode Pro. Trata-se de um e-commerce de eletrodomésticos no qual começa com versões clássicas de desenvolvimento como HTML, CSS e JS... conforme o curso da Recode Pro vai evoluindo o projeto passa por refatorações. Então fique à vontade em ver diversas formas de se fazer o mesmo e com níveis diferentes.
+   FullStackEletro is a website developed on the support and guidance of Recode Pro. It is an e-commerce of home appliances in which it starts with classic versions of development such as HTML, CSS and JS ... as the Recode Pro course evolves, project undergoes refactorings. So feel free to see different ways of doing the same and at different levels.
 </p>
-
 <hr/>
 
 
@@ -14,5 +13,12 @@
 
 
 
-## Dispositivos
+## Devices
 <a href="https://imgbox.com/PrZNq7CC" target="_blank"><img src="https://images2.imgbox.com/d3/87/PrZNq7CC_o.png" alt="image host"/></a>
+
+
+## Source
+
+<ul>
+  <li><a href="https://www.recodepro.org.br/">Recode Pro</a></li>
+</ul>
