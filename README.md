@@ -16,6 +16,7 @@
 ## Devices
 <a href="https://imgbox.com/PrZNq7CC" target="_blank"><img src="https://images2.imgbox.com/d3/87/PrZNq7CC_o.png" alt="image host"/></a>
 
+<hr>
 
 ## Source
 
